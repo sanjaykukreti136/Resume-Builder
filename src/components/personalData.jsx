@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import "./css/personal.css"
 import Preview from "./preview";
 import { detailCreator } from "./redux/actions/detailsAction"
 let PersonalData = () => {
     let dispatch = useDispatch();
+    let history = useHistory();
     let details = useSelector(state => state.detail);
-    console.log(details);
+    //sconsole.log(details);
     return <>
         <div className="personal-container" >
 
@@ -30,29 +32,31 @@ let PersonalData = () => {
                         <input type="text" class="form-control" placeholder="Email"
                             onChange={(e) => {
                                 dispatch(detailCreator({ email: e.currentTarget.value }))
-                            }}/>
+                            }} />
                     </div>
                     <div class="col-4">
                         <input type="text" class="form-control" placeholder="Phone No"
                             onChange={(e) => {
                                 dispatch(detailCreator({ phone: e.currentTarget.value }))
-                            }}/>
+                            }} />
                     </div>
 
                     <div class="col-4">
                         <input type="text" class="form-control" placeholder="City"
                             onChange={(e) => {
                                 dispatch(detailCreator({ city: e.currentTarget.value }))
-                            }}/>
+                            }} />
                     </div>
                     <div class="col-4">
                         <input type="text" class="form-control" placeholder="State"
                             onChange={(e) => {
                                 dispatch(detailCreator({ state: e.currentTarget.value }))
-                            }}/>
+                            }} />
                     </div>
                 </div>
-                <button className="btn btn-primary m-4" >Next</button>
+                <button className="btn btn-primary m-4" onClick={() => {
+                    history.push("/qualification")
+                }} >Next</button>
 
             </div>
 

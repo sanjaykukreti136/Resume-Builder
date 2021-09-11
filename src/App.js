@@ -8,6 +8,7 @@ import { autha, firestorea } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { userCreator } from "./components/redux/actions/userAction";
 import Personal from "./components/personalData";
+import Qualification from "./components/qualification";
 function App() {
   //let history = useHistory();
   let dispatch = useDispatch()
@@ -43,6 +44,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
+          <Route path="/qualification" ><Qualification /> </Route>
           <Route path="/personal"> <Personal /> </Route>
           <Route path="/login"><Login /></Route>
           <Route path="/signup"><Signup /></Route>
