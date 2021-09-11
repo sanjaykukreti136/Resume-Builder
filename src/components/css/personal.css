@@ -1,0 +1,10 @@
+.personal-container{
+    height: 92vh;
+    border: 1px solid red;
+    display: flex;
+}
+
+.input-data{
+    width: 50%;
+    border: 1px solid black;
+}

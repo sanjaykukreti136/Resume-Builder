@@ -1,0 +1,29 @@
+.log-out{    
+    width: 3rem;
+    height: 3rem;
+    font-size: 10px;
+    position: fixed;
+    border-radius: 50%;
+    top: 90vh;
+    left: 95vw;
+}
+.templates{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-evenly;
+}
+
+.temp-box{
+    width: 15rem;
+    height: 20rem;
+    border: 2px solid;
+}
+
+.temp-box img{
+        width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+

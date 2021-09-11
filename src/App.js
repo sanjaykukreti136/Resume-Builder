@@ -1,16 +1,53 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import Signup from "./components/signup";
 import Navbar from "./components/navbar";
 import Home from "./components/home"
 import Login from "./components/login";
+import { useEffect } from "react";
+import { autha, firestorea } from "./firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { userCreator } from "./components/redux/actions/userAction";
+import Personal from "./components/personalData";
 function App() {
+  //let history = useHistory();
+  let dispatch = useDispatch()
+  let state = useSelector(state => state);
+  console.log(state);
+  useEffect(() => {
+
+    let unsub = autha.onAuthStateChanged(async (user) => {
+      console.log("chala");
+      if (user) {
+        dispatch(userCreator(user));
+        let { uid, email } = user;
+        let docRef = firestorea.collection("users").doc(uid);
+        let doc = docRef.get();
+
+        if (!(await doc).exists) {
+          docRef.set({
+            email,
+          })
+        }
+
+      }
+
+    })
+
+    return () => {
+      unsub();
+    }
+  }, [])
+
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
+          <Route path="/personal"> <Personal /> </Route>
           <Route path="/login"><Login /></Route>
           <Route path="/signup"><Signup /></Route>
           <Route path="/" ><Home /></Route>
+
         </Switch>
       </Router>
     </>
