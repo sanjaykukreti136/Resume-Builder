@@ -43,6 +43,9 @@ let Signup = () => {
                                 autha.createUserWithEmailAndPassword(email, password);
 
                             }
+                            else {
+                                alert("PASSWORD DOESNOT MATCH")
+                            }
 
 
                         }} type="button" class="btn btn-warning login">Signup</button>

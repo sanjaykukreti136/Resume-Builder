@@ -32,7 +32,9 @@ let Login = () => {
                         </div>
                         <button onClick={(e) => {
                             e.preventDefault();
-                            autha.signInWithEmailAndPassword(email, password);
+                            autha.signInWithEmailAndPassword(email, password).catch(() => {
+                                alert("WRONG EMAIL OR PASSWORD")
+                            })
                         }} type="button" class="btn btn-warning login">Login</button>
                         <br />
                         <br />

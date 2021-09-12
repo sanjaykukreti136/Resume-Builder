@@ -3,12 +3,14 @@ import { Redirect, useHistory } from "react-router-dom";
 import { autha } from "../firebase";
 import { templateSelect } from "./redux/actions/templateAction";
 import "./css/home.css"
+import { firestorea } from "../firebase";
 let Home = () => {
     let dispatch = useDispatch();
     let user = useSelector(state => state.user);
     let history = useHistory();
     let code = useSelector(state => state.template);
     console.log(code);
+    
     return <>
 
         <div className="templates" >
