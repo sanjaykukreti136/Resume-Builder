@@ -3,11 +3,17 @@ import { useHistory } from "react-router";
 import "./css/personal.css"
 import Preview from "./preview";
 import { detailCreator } from "./redux/actions/detailsAction"
+import { Save } from "./redux/actions/saveAction";
 let PersonalData = () => {
     let dispatch = useDispatch();
     let history = useHistory();
     let details = useSelector(state => state.detail);
+    let { fname, llname, email, phone, city, state, deg, clg, year, ispublic } = details;
     //sconsole.log(details);
+    let { id } = useSelector(state => state.saveState);
+    let { uid } = useSelector(state => state.user);
+    let code = useSelector(state => state.template);
+
     return <>
         <div className="personal-container" >
 
@@ -53,10 +59,25 @@ let PersonalData = () => {
                                 dispatch(detailCreator({ state: e.currentTarget.value }))
                             }} />
                     </div>
+
+                    <div class="list-group m-4">
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox"
+                                onClick={(e) => {
+                                    dispatch(detailCreator({ isPublic: e.currentTarget.value }))
+                                }}
+                                checked={ispublic} />
+                            PUBLIC
+                        </label>
+                    </div>
+
                 </div>
                 <button className="btn btn-primary m-4" onClick={() => {
                     history.push("/qualification")
                 }} >Next</button>
+                <button className="btn btn-primary m-4" onClick={() => {
+                    history.push("/")
+                }} >Back</button>
 
             </div>
 

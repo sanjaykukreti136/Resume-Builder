@@ -9,6 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { userCreator } from "./components/redux/actions/userAction";
 import Personal from "./components/personalData";
 import Qualification from "./components/qualification";
+import Public from "./components/publicpreview";
+import Project from "./components/projects";
+import Skills from "./components/skills";
+import Ach from "./components/achievements";
 function App() {
   //let history = useHistory();
   let dispatch = useDispatch()
@@ -44,7 +48,11 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
+          <Route path="/ach" ><Ach /></Route>
+          <Route path="/skills" ><Skills /></Route>
+          <Route path="/projects"> <Project /></Route>
           <Route path="/qualification" ><Qualification /> </Route>
+          <Route path="/publicpreview/:rid" ><Public /> </Route>
           <Route path="/personal"> <Personal /> </Route>
           <Route path="/login"><Login /></Route>
           <Route path="/signup"><Signup /></Route>

@@ -1,0 +1,19 @@
+let initialstate = {
+    loading: null,
+    err: null,
+    id: ""
+}
+
+export const saveReducer = (state = initialstate, action) => {
+    switch (action.type) {
+        case "SAVE_RESUME":
+            return { ...state, loading: true };
+        case "SAVE_ERROR":
+            return { ...state, loading: false, err: action.payload };
+        case "SAVE_COMPLETED":
+            return { ...state, loading: false, id: action.payload }
+        default:
+            return state;
+
+    }
+}

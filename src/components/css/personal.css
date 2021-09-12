@@ -1,10 +1,10 @@
-.personal-container{
+.personal-container, .edu-container{
     height: 92vh;
     border: 1px solid red;
     display: flex;
 }
 
-.input-data{
-    width: 50%;
+.input-data, .edu-data{
+    width: 40%;
     border: 1px solid black;
 }

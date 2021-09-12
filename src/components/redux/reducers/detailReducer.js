@@ -5,9 +5,16 @@ let initialState = {
     phone: "",
     city: "",
     state: "",
-    degree: "",
     clg: "",
-    year: ""
+    deg: "",
+    year: "",
+    sem: "",
+    cgpa: "",
+    project: [],
+    skills: [],
+    ach: [],
+    exp: [],
+    isPublic: false,
 }
 
 let detailReducer = (state = initialState, action) => {
