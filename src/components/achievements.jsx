@@ -18,7 +18,7 @@ let Ach = () => {
     let { id } = useSelector(state => state.saveState);
     let { uid } = useSelector(state => state.user);
     let code = useSelector(state => state.template);
-
+    console.log(code + "   -  =  code ==");
     return <>
         <div className="ach-container" >
 
@@ -57,6 +57,7 @@ let Ach = () => {
                     history.push("/skills")
                 }} >Back</button>
                 <button className="btn btn-primary" onClick={() => {
+                    dispatch(detailCreator({ temp: code }))
                     dispatch(Save(details, uid, code))
                     //  history.push("/qualification")
                 }} >SAVE</button>

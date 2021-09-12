@@ -14,7 +14,9 @@ let initialState = {
     skills: [],
     ach: [],
     exp: [],
-
+    myobj: [],
+    temp: "",
+    tempobj: {},
     isPublic: false,
 }
 

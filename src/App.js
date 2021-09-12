@@ -14,6 +14,7 @@ import Project from "./components/projects";
 import Skills from "./components/skills";
 import Ach from "./components/achievements";
 import Profile from "./components/profile";
+import Prev from "./components/prev";
 function App() {
   //let history = useHistory();
   let dispatch = useDispatch()
@@ -49,6 +50,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
+          <Route path="/prev" ><Prev/></Route>
           <Route path="/profile"><Profile /></Route>
           <Route path="/ach" ><Ach /></Route>
           <Route path="/skills" ><Skills /></Route>
