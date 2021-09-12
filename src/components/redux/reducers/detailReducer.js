@@ -14,6 +14,7 @@ let initialState = {
     skills: [],
     ach: [],
     exp: [],
+
     isPublic: false,
 }
 

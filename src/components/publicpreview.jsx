@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { firestorea } from "../firebase";
-import "./css/publicpreview.css"
+import "./css/preview.css"
 import { useSelector } from "react-redux";
 
 let Public = () => {
@@ -20,26 +20,102 @@ let Public = () => {
 
     // console.log(fname + "hora");
     // console.log(previewData.code);
+    let template = previewData.code;
     console.log(previewData)
     return <>
-        {previewData ? (<>
+        {previewData ? <div className="final">
+            {(template == "D") ? <div className={`template-${template}-preview-container`} >
 
-            <div className="preview-container" >
+                <p className={`template-${template}-fname`} id="fname" >{fname + " " + lname}</p>
 
-                <p className={`template-${previewData.code}`} id="fname" >{fname + " " + lname}</p>
+                <p className={`template-${template}-email`} id="email" >{email + "    " + phone + " " + city + " " + state}</p>
 
-                <p className={`template-${previewData.code}`} id="email" >{email + "    " + phone + " " + city + " " + state}</p>
-                <div className="main" >
-                    <div className="left" >
+                <div className={`template-${template}-main`} >
+                    {(template == "C") ? <hr width="100%" ></hr> : ""}
+                    <div className={`template-${template}-left`}>
                         <h3>Education</h3>
-                        <hr size="8" width="25%" color="red" />
-                        <h5 className={`template-${previewData.code}`} >{clg}</h5>
-                        <p className={`template-${previewData.code}`} >{`${deg + " "}  Passing Out : ${year}`}</p>
-                        <p className={`template-${previewData.code}`} >{`Sem :${sem + " "}`}</p>
 
-                        <p className={`template-${previewData.code}`} >{`CGPA : ${cgpa}`}</p>
+                        {(template == "C") ? "" : <hr size="8" width="25%" color="red" />}
+                        <h5 className={`template-${template}`} >{clg}</h5>
+                        <p className={`template-${template}`} >{`${deg + " "}  Passing Out : ${year}`}</p>
+                        <p className={`template-${template}`} >{`Sem :${sem + " "}`}</p>
+
+                        <p className={`template-${template}`} >{`CGPA : ${cgpa}`}</p>
+                        {template == "B" ? <hr /> : ""}
+                        <h3>Work Experience</h3>
+                        {(template == "C") ? "" : <hr size="8" width="100%" color="red" />}
+                        {
+                            exp.map((ele) => {
+                                return <div className="exp" >
+
+                                    <h5>{ele.company}</h5>
+                                    <h6> {ele.role}</h6>
+                                    <p>{ele.des}</p>
+
+                                </div>
+                            })
+                        }
+                        {template == "B" ? <hr /> : ""}
+                        <h3>Skills</h3>
+                        {(template == "C") ? "" : <hr size="8" width="80px" color="red" />}
+                        {
+                            skills.map((ele) => {
+                                return <p id="skills" >{ele}</p>
+                            })
+
+
+                        }
+
+                    </div>
+                    <div className={`template-${template}-right`}>
+                        {template == "B" ? <hr /> : ""}
                         <h3>Projects</h3>
-                        <hr size="8" width="25%" color="red" />
+
+                        {(template == "C") ? "" : <hr size="8" width="25%" color="red" />}
+                        {
+
+                            project.map((ele) => {
+                                return <div className="projects" >
+                                    <br />
+                                    <h5>{ele.name}</h5>
+                                    <p> {ele.des}</p>
+                                    <p>{`TECH USED :${ele.tech}`}</p>
+                                    <h6>{ele.github}</h6>
+                                </div>
+                            })
+                        }
+                        {template == "B" ? <hr /> : ""}
+                        <h3>Achievements</h3>
+                        {(template == "C") ? "" : <hr size="8" width="180px" color="red" />}
+                        {
+                            ach.map((ele) => {
+                                return <p>{`•${ele}`}</p>
+                            })
+                        }
+                    </div>
+                </div>
+
+            </div> : <div className={`template-${template}-preview-container`} >
+
+                <p className={`template-${template}-fname`} id="fname" >{fname + " " + lname}</p>
+
+                <p className={`template-${template}-email`} id="email" >{email + "    " + phone + " " + city + " " + state}</p>
+
+                <div className={`template-${template}-main`} >
+                    {(template == "C") ? <hr width="100%" ></hr> : ""}
+                    <div className={`template-${template}-left`}>
+                        <h3>Education</h3>
+
+                        {(template == "C") ? "" : <hr size="8" width="25%" color="red" />}
+                        <h5 className={`template-${template}`} >{clg}</h5>
+                        <p className={`template-${template}`} >{`${deg + " "}  Passing Out : ${year}`}</p>
+                        <p className={`template-${template}`} >{`Sem :${sem + " "}`}</p>
+
+                        <p className={`template-${template}`} >{`CGPA : ${cgpa}`}</p>
+                        {template == "B" ? <hr /> : ""}
+                        <h3>Projects</h3>
+
+                        {(template == "C") ? "" : <hr size="8" width="25%" color="red" />}
                         {
 
                             project.map((ele) => {
@@ -53,9 +129,10 @@ let Public = () => {
                             })
                         }
                     </div>
-                    <div className="right">
+                    <div className={`template-${template}-right`}>
+                        {template == "B" ? <hr /> : ""}
                         <h3>Work Experience</h3>
-                        <hr size="8" width="25%" color="red" />
+                        {(template == "C") ? "" : <hr size="8" width="100%" color="red" />}
                         {
                             exp.map((ele) => {
                                 return <div className="exp" >
@@ -67,18 +144,19 @@ let Public = () => {
                                 </div>
                             })
                         }
-
+                        {template == "B" ? <hr /> : ""}
                         <h3>Skills</h3>
-                        <hr size="8" width="50%" color="red" />
+                        {(template == "C") ? "" : <hr size="8" width="80px" color="red" />}
                         {
                             skills.map((ele) => {
-                                return <p>{ele}</p>
+                                return <p id="skills" >{ele}</p>
                             })
 
 
                         }
+                        {template == "B" ? <hr /> : ""}
                         <h3>Achievements</h3>
-                        <hr size="8" width="50%" color="red" />
+                        {(template == "C") ? "" : <hr size="8" width="180px" color="red" />}
                         {
                             ach.map((ele) => {
                                 return <p>{`•${ele}`}</p>
@@ -87,10 +165,9 @@ let Public = () => {
                     </div>
                 </div>
 
-            </div>
-        </>) : ""}
+            </div>}
 
-
+        </div> : ""}
     </>
 }
 

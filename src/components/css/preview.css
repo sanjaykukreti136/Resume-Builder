@@ -42,7 +42,7 @@
 
 .template-A-left{
   margin-left: 5px;
-  width: 70%;
+  width: 60%;
 }
 .template-A-right{
   margin-left: 10px;
@@ -83,11 +83,94 @@
   width: 100%;
   
 }
-
+.template-B-main p{
+  width: 90%;
+}
+.template-A-main p{
+  width: 90%;
+}
 .template-B-left{
   margin-left: 5px;
-  width: 70%;
+  width: 60%;
 }
 .template-B-right{
   margin-left: 10px;
+}
+
+
+/* //////////////////////////////////  */
+.template-C-preview-container{
+     overflow: hidden;
+    overflow-y: scroll;
+  width: 60%;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+.template-C-fname{
+  font-size: 2.5rem;
+      justify-content: center;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.template-C-email{
+          width: 100%;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 1rem;
+    margin-left: 14rem;
+}
+
+.template-C-main{
+  margin-left: 20px;
+}
+
+.template-C-main h3{
+      color: white;
+    background-color: black;
+}
+
+/*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.template-D-preview-container{
+  width: 60%;
+}
+
+.template-D-main{
+  width: 100%;
+  display: flex;
+}
+.template-D-fname{
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  color: white;
+  background-color: black;
+}
+.template-D-email{
+  color: white;
+  background-color: black;
+  font-size: 1rem;
+  margin-left: 1rem;
+  word-spacing: 3rem;
+}
+.template-D-left{
+  margin-left: 1rem;
+  width: 50%;
+}
+
+.template-D-right{
+  margin-left: 1rem;
+}
+
+.template-D-preview-container h3{
+  
+  color:blue ;
+}
+
+.template-D-preview-container hr{
+  width: 100%;
+  color: black;
 }

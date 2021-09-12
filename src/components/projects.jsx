@@ -14,20 +14,20 @@ let Project = () => {
     let pob = { name: "", des: "", tech: "", github: "" }
     console.log(details);
     return <>
-        <div className="edu-container" >
+        <div className="pro-container" >
 
-            <div className="edu-data" >
+            <div className="pro-data" >
 
                 <div class="row m-4">
                     <h2>PROJECTS</h2>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Project Name"
                             onChange={(e) => {
                                 pob.name = e.currentTarget.value
                                 // dispatch(detailCreator({ clg: e.currentTarget.value }))
                             }} />
                     </div>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Description"
                             onChange={(e) => {
                                 pob.des = e.currentTarget.value;
@@ -35,14 +35,14 @@ let Project = () => {
                             }}
                         />
                     </div>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Tech Used"
                             onChange={(e) => {
                                 pob.tech = e.currentTarget.value
                                 // dispatch(detailCreator({ sem: e.currentTarget.value }))
                             }} />
                     </div>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Github Link"
                             onChange={(e) => {
                                 pob.github = e.currentTarget.value
@@ -52,19 +52,19 @@ let Project = () => {
 
                 </div>
 
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     projectss.push(pob);
                     dispatch(detailCreator({ project: projectss }))
 
                     history.push("/projects")
                 }} >ADD MORE</button>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     projectss.push(pob);
                     dispatch(detailCreator({ project: projectss }))
 
                     history.push("/skills")
                 }} >Next</button>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     history.push("/qualification")
                 }} >Back</button>
 

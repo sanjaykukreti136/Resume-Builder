@@ -14,35 +14,35 @@ let Qualification = () => {
 
             <div className="edu-data" >
 
-                <div class="row m-4">
+                <div class="row m-4"  >
                     <h2>Qualification</h2>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="College Name"
                             onChange={(e) => {
                                 dispatch(detailCreator({ clg: e.currentTarget.value }))
                             }} />
                     </div>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Degree"
                             onChange={(e) => {
                                 dispatch(detailCreator({ deg: e.currentTarget.value }))
                             }}
                         />
                     </div>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Semester"
                             onChange={(e) => {
                                 dispatch(detailCreator({ sem: e.currentTarget.value }))
                             }} />
                     </div>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="Passing Year"
                             onChange={(e) => {
                                 dispatch(detailCreator({ year: e.currentTarget.value }))
                             }} />
                     </div>
 
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="CGPA"
                             onChange={(e) => {
                                 dispatch(detailCreator({ cgpa: e.currentTarget.value }))
@@ -50,10 +50,10 @@ let Qualification = () => {
                     </div>
 
                 </div>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     history.push("/projects")
                 }} >Next</button>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     history.push("/personal")
                 }} >Back</button>
 

@@ -13,12 +13,15 @@
     display: flex;
     margin-top: 5rem;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .temp-box{
     width: 15rem;
     height: 20rem;
     border: 2px solid;
+    margin-left: 5rem;
+    margin-top: 4rem;
 }
 
 .temp-box img{

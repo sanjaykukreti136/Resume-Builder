@@ -24,6 +24,18 @@ let Home = () => {
                 dispatch(templateSelect("C"));
                 history.push("/personal");
             }} > <img src="http://localhost:3000/skin1.svg"></img> </div>
+            <div className="temp-box" onClick={() => {
+                dispatch(templateSelect("D"));
+                history.push("/personal");
+            }} > <img src="http://localhost:3000/skin1.svg"></img> </div>
+            <div className="temp-box" onClick={() => {
+                dispatch(templateSelect("E"));
+                history.push("/personal");
+            }} > <img src="http://localhost:3000/skin1.svg"></img> </div>
+            <div className="temp-box" onClick={() => {
+                dispatch(templateSelect("F"));
+                history.push("/personal");
+            }} > <img src="http://localhost:3000/skin1.svg"></img> </div>
         </div>
 
         {user ? "" : <Redirect to="/login" />}

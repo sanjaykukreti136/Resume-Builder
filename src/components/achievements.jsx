@@ -20,38 +20,48 @@ let Ach = () => {
     let code = useSelector(state => state.template);
 
     return <>
-        <div className="edu-container" >
+        <div className="ach-container" >
 
-            <div className="edu-data" >
+            <div className="ach-data" >
 
                 <div class="row m-4">
                     <h2>Achievements</h2>
-                    <div class="col-4">
+                    <div >
                         <input type="text" class="form-control" placeholder="College Name"
                             onChange={(e) => {
                                 a = e.currentTarget.value;
 
                             }} />
 
-                        <button className="btn btn-primary m-4" onClick={() => {
+                        <button className="btn btn-primary" onClick={() => {
                             acha.push(a);
                             dispatch(detailCreator({ ach: acha }))
                             history.push("/ach")
                         }} >ADD MORE</button>
                     </div>
                 </div>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <div class="list-group m-4">
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox"
+                            onClick={(e) => {
+                                dispatch(detailCreator({ isPublic: e.currentTarget.value }))
+                            }}
+                            checked={ispublic} />
+                        PUBLIC
+                    </label>
+                </div>
+                <button className="btn btn-primary" onClick={() => {
                     history.push("/skills")
                 }} >Next</button>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     history.push("/skills")
                 }} >Back</button>
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     dispatch(Save(details, uid, code))
                     //  history.push("/qualification")
-                }} >Save to database</button>
+                }} >SAVE</button>
 
-                <button className="btn btn-primary m-4" onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                     alert(`localhost:3000/publicpreview/${id}`)
                 }} >GENERATE LINK</button>
 
