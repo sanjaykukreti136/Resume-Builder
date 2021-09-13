@@ -50,7 +50,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/prev" ><Prev/></Route>
+          <Route path="/prev/:rid" ><Prev /></Route>
           <Route path="/profile"><Profile /></Route>
           <Route path="/ach" ><Ach /></Route>
           <Route path="/skills" ><Skills /></Route>

@@ -12,7 +12,7 @@ let Navbar = () => {
     let obj = useSelector(state => state.detail);
     let objmy = [];
     return <>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-dark nav-m">
             <div class="container-fluid">
                 <Link class="navbar-brand" to="/">Resume Builder</Link>
                 <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png" onClick={() => {

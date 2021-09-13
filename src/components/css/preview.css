@@ -4,10 +4,39 @@
     overflow: scroll;
 }
 
+
+
+.pre{
+    overflow: hidden;
+    margin-left: 7vw;
+    background: none;
+    align-items: center;
+    width: 42vw;
+
+        border: 1px solid rgb(247, 245, 245);
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 10px 10px;
+}
+
+.template-A-preview-container{
+    
+    width: 42vw;
+
+    overflow-y: scroll;
+    background-color: white;
+    height: 82vh;
+    overflow-x: hidden;
+
+}
+
 .template-B-preview-container{
-  width: 50vw;
-  border: 1px solid yellow;
-  overflow: scroll;
+    width: 50vw;
+
+    overflow: scroll;
+    background-color: white;
+    height: 80vh;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    border: 4px solid blueviolet;
 }
 .template-A{
   color: rgb(14, 0, 0);
@@ -100,12 +129,26 @@
 
 /* //////////////////////////////////  */
 .template-C-preview-container{
-     overflow: hidden;
-    overflow-y: scroll;
-  width: 60%;
+       width: 50vw;
+
+    overflow: scroll;
+    background-color: white;
+    height: 80vh;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    border: 4px solid blueviolet;
 }
 
-p{
+.template-C-preview-container p{
+  margin-bottom: 0;
+}
+.template-A-preview-container p{
+  margin-bottom: 0;
+}
+.template-B-preview-container p{
+  margin-bottom: 0;
+}
+.template-D-preview-container p{
   margin-bottom: 0;
 }
 
@@ -136,7 +179,14 @@ p{
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 .template-D-preview-container{
-  width: 60%;
+  width: 50vw;
+
+    overflow: scroll;
+    background-color: white;
+    height: 80vh;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    border: 4px solid blueviolet;
 }
 
 .template-D-main{
@@ -174,3 +224,316 @@ p{
   width: 100%;
   color: black;
 }
+
+
+
+/* ////////////////////// portfolio */
+
+.main{
+background-color: white;
+    width: 50vw;
+
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 82vh;
+}
+
+.main .navbar{
+    width: 50vw;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    height: 8vh;
+
+    border-bottom: none;
+}
+
+.main h3:hover{
+   color: blue;
+}
+
+.main h3{
+        font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+}
+.main .navbar a{
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    color: white;
+    font-family: 'Kaisei Tokumin', serif;
+
+}
+
+.main .collapse{
+    margin-left: 10rem;
+}
+.main .collapse a{
+    font-size: 1rem;
+    
+}
+
+ .main #first-a{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.main #first-a:hover{
+    color: rgb(43, 255, 0);
+}
+
+
+.main .rest{
+
+    height: 92vh;
+    width: 100vw;
+    background-color: #fcfafa;
+    border-top: none;
+}
+
+.main .upper{
+    display:  flex;
+}
+
+ .main .upper-inner{
+        margin-top: 10rem;
+    margin-left: 0rem;
+}
+ .main .upper-inner h1{
+    margin-top: 2rem;
+    margin-left: 0;
+    font-size: 4rem;
+    color: blueviolet;
+    font-family: serif;
+    font-weight: revert;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px 4px rgb(248 118 216);
+    padding: 0;
+}
+.main .upper-inner h4{
+        font-size: 3rem;
+    color: darkred;
+    font-family: serif;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.main #down{
+        position: fixed;
+    height: 4rem;
+    /* margin-top: 90vh; */
+    width: 6rem;
+    margin-top: 80vh;
+    margin-left: 46vw;
+}
+
+.main img{
+        width: 15vw;
+    height: 20vh;
+    margin-top: 10rem;
+    margin-left: 5rem;
+}
+.main .intro{
+  width: 60vw;
+        
+  text-align: center;
+}
+.main .intro p{
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.main .upper #second-span::before{
+    content: "I am a Web Developer";
+
+       animation: animate infinite 5s;
+        padding-left: 10px;
+    }
+  
+    @keyframes animate {
+  
+  
+        25% {
+            content: "I am Competetive Programmer";
+        }
+        50%{
+            content: "I like Problem Solving";
+        }
+        75%{
+            content: "I like Web development";
+        }
+
+  
+    }
+.main .upper-inner h1::before{
+        content: "Hello 👋";
+        animation: anima infinite 5s;
+    }
+
+    @keyframes anima{
+        25%{
+            content: "Hello 🖐";
+        }
+        50%{
+            content: "Hello 👋";
+        }
+        75%{
+            content: "Hello 🖐";
+        }
+    }
+
+    .main .education{
+        margin : 4rem
+    }
+
+    .main .education h3{
+            font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+    }
+
+    .main .education h4{
+        
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: brown;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    }
+
+    .main .education p{
+            font-size: 1.4rem;
+    font-weight: 900;
+    margin-top: 1rem;
+    }
+
+    .main .skills h3{ 
+                    font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+    }
+
+    .main .sk{
+            display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    .main .sk p{
+            font-size: x-large;
+    font-family: cursive;
+
+        display: flex;
+        width: 8rem;
+        height: 3rem;
+        text-align: center;
+        justify-content: center;
+        color: rgb(250, 243, 243);
+        background-color: black;
+        margin: 4rem;
+        border: 1px solid black;
+        border-radius: 5%;
+    }
+     
+    .main .sk p:hover{
+        background-color: crimson;
+
+    }
+
+    .main .projects h3{
+        font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+
+    }
+    .main work h3{
+                 font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+
+    }
+    .main .p{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 4rem;
+    }
+    .main .work .pro{
+        margin-top: 2rem;
+        width: 30rem;
+    border: 1px solid;
+    height: 15rem;
+    background-color: rgb(247, 134, 218);
+     border-radius: 5%;
+    }
+   .main .projects .pro{
+     margin-top: 2rem;
+        width: 30rem;
+    border: 1px solid;
+    height: 15rem;
+    background-color: rgb(238, 255, 86);
+     border-radius: 5%;
+    }
+    .main .projects .pro:hover{
+        background-color: crimson;
+        color: white;
+    }
+    
+    .main .projects  .pro  h4{
+        color: rgb(253, 249, 249);
+        background-color: rgb(27, 27, 27);
+        text-align: center;
+        
+    }
+     
+    .main .work  .pro  h4{
+        color: rgb(253, 249, 249);
+        background-color: rgb(27, 27, 27);
+        text-align: center;
+        
+    }
+
+     .main .pro p{
+        margin: 1rem;
+        width: 100%;
+    }
+    .main .pro h5{
+        margin: 1rem;
+
+    }
+    .main .pro a{
+        margin: 1rem;
+    }
+    
+    .main .ach{
+        
+        text-align: center;
+    }
+    .main .ach h3{
+        
+        font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .main .ach h6{
+        font-size: 1rem;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .main .ac{
+        width: 100%;
+        
+        border: 2px solid red;
+        
+        color: rgb(197, 184, 3);
+        background-color: black;
+    }

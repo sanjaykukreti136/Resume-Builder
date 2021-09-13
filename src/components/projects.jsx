@@ -4,7 +4,7 @@ import "./css/personal.css"
 import Preview from "./preview";
 import { detailCreator } from "./redux/actions/detailsAction"
 import { Save } from "./redux/actions/saveAction";
-
+import { useState } from "react";
 let Project = () => {
 
     let dispatch = useDispatch();
@@ -15,61 +15,68 @@ let Project = () => {
     console.log(details);
     return <>
         <div className="pro-container" >
+            <div className="bahr" >
+                <div className="pro-data" >
 
-            <div className="pro-data" >
+                    <div class="row m-4">
+                        <h2>PROJECTS</h2>
+                        <div >
+                            <input type="text" class="form-control" placeholder="Project Name"
+                                onChange={(e) => {
+                                    pob.name = e.currentTarget.value
 
-                <div class="row m-4">
-                    <h2>PROJECTS</h2>
-                    <div >
-                        <input type="text" class="form-control" placeholder="Project Name"
-                            onChange={(e) => {
-                                pob.name = e.currentTarget.value
-                                // dispatch(detailCreator({ clg: e.currentTarget.value }))
-                            }} />
-                    </div>
-                    <div >
-                        <input type="text" class="form-control" placeholder="Description"
-                            onChange={(e) => {
-                                pob.des = e.currentTarget.value;
-                                // dispatch(detailCreator({ deg: e.currentTarget.value }))
-                            }}
-                        />
-                    </div>
-                    <div >
-                        <input type="text" class="form-control" placeholder="Tech Used"
-                            onChange={(e) => {
-                                pob.tech = e.currentTarget.value
-                                // dispatch(detailCreator({ sem: e.currentTarget.value }))
-                            }} />
-                    </div>
-                    <div >
-                        <input type="text" class="form-control" placeholder="Github Link"
-                            onChange={(e) => {
-                                pob.github = e.currentTarget.value
+                                    // dispatch(detailCreator({ clg: e.currentTarget.value }))
+                                }} />
+                        </div>
+                        <div >
+                            <input type="text" class="form-control" placeholder="Description"
+                                onChange={(e) => {
+                                    pob.des = e.currentTarget.value;
 
-                            }} />
+                                    // dispatch(detailCreator({ deg: e.currentTarget.value }))
+                                }}
+                            />
+                        </div>
+                        <div >
+                            <input type="text" class="form-control" placeholder="Tech Used"
+                                onChange={(e) => {
+
+                                    pob.tech = e.currentTarget.value
+
+                                    // dispatch(detailCreator({ sem: e.currentTarget.value }))
+                                }} />
+                        </div>
+                        <div >
+                            <input type="text" class="form-control" placeholder="Github Link"
+                                onChange={(e) => {
+                                    pob.github = e.currentTarget.value
+
+                                }} />
+                        </div>
+
                     </div>
+
+                    <button className="btn btn-primary" onClick={() => {
+                        projectss.push(pob);
+                        dispatch(detailCreator({ project: projectss }))
+
+                        history.push("/projects")
+                    }} >ADD MORE</button>
+                    <button className="btn btn-primary" onClick={() => {
+                        projectss.push(pob);
+                        dispatch(detailCreator({ project: projectss }))
+
+                        history.push("/skills")
+                    }} >Next</button>
+                    <button className="btn btn-primary" onClick={() => {
+                        history.push("/qualification")
+                    }} >Back</button>
 
                 </div>
-
-                <button className="btn btn-primary" onClick={() => {
-                    projectss.push(pob);
-                    dispatch(detailCreator({ project: projectss }))
-
-                    history.push("/projects")
-                }} >ADD MORE</button>
-                <button className="btn btn-primary" onClick={() => {
-                    projectss.push(pob);
-                    dispatch(detailCreator({ project: projectss }))
-
-                    history.push("/skills")
-                }} >Next</button>
-                <button className="btn btn-primary" onClick={() => {
-                    history.push("/qualification")
-                }} >Back</button>
-
             </div>
-            <Preview />
+            <div className="pre">
+                <Preview />
+            </div>
         </div>
     </>
 }

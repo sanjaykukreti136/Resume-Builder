@@ -21,55 +21,56 @@ let Ach = () => {
     console.log(code + "   -  =  code ==");
     return <>
         <div className="ach-container" >
+            <div className="bahr" >
+                <div className="ach-data" >
 
-            <div className="ach-data" >
+                    <div class="row m-4">
+                        <h2>Achievements</h2>
+                        <div >
+                            <input type="text" class="form-control" placeholder="College Name"
+                                onChange={(e) => {
+                                    a = e.currentTarget.value;
 
-                <div class="row m-4">
-                    <h2>Achievements</h2>
-                    <div >
-                        <input type="text" class="form-control" placeholder="College Name"
-                            onChange={(e) => {
-                                a = e.currentTarget.value;
+                                }} />
 
-                            }} />
-
-                        <button className="btn btn-primary" onClick={() => {
-                            acha.push(a);
-                            dispatch(detailCreator({ ach: acha }))
-                            history.push("/ach")
-                        }} >ADD MORE</button>
+                            <button className="btn btn-primary" onClick={() => {
+                                acha.push(a);
+                                dispatch(detailCreator({ ach: acha }))
+                                history.push("/ach")
+                            }} >ADD MORE</button>
+                        </div>
                     </div>
-                </div>
-                <div class="list-group m-4">
-                    <label class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                            onClick={(e) => {
-                                dispatch(detailCreator({ isPublic: e.currentTarget.value }))
-                            }}
-                            checked={ispublic} />
-                        PUBLIC
-                    </label>
-                </div>
-                <button className="btn btn-primary" onClick={() => {
-                    history.push("/skills")
-                }} >Next</button>
-                <button className="btn btn-primary" onClick={() => {
-                    history.push("/skills")
-                }} >Back</button>
-                <button className="btn btn-primary" onClick={() => {
-                    dispatch(detailCreator({ temp: code }))
-                    dispatch(Save(details, uid, code))
-                    //  history.push("/qualification")
-                }} >SAVE</button>
+                    <div class="list-group m-4">
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox"
+                                onClick={(e) => {
+                                    dispatch(detailCreator({ isPublic: e.currentTarget.value }))
+                                }}
+                                checked={ispublic} />
+                            PUBLIC
+                        </label>
+                    </div>
+                    <button className="btn btn-primary" onClick={() => {
+                        history.push("/skills")
+                    }} >Next</button>
+                    <button className="btn btn-primary" onClick={() => {
+                        history.push("/skills")
+                    }} >Back</button>
+                    <button className="btn btn-primary" onClick={() => {
+                        dispatch(detailCreator({ temp: code }))
+                        dispatch(Save(details, uid, code))
+                        //  history.push("/qualification")
+                    }} >SAVE</button>
 
-                <button className="btn btn-primary" onClick={() => {
-                    alert(`localhost:3000/publicpreview/${id}`)
-                }} >GENERATE LINK</button>
+                    <button className="btn btn-primary" onClick={() => {
+                        alert(`localhost:3000/publicpreview/${id}`)
+                    }} >GENERATE LINK</button>
 
+                </div>
             </div>
-
-            <Preview />
-
+            <div className="pre">
+                <Preview />
+            </div>
         </div>
     </>
 }
