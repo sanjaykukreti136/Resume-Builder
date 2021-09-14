@@ -4,9 +4,12 @@
     overflow: scroll;
 }
 
-
-
+.pre:hover{
+  transform: scale(1.031);
+  
+}
 .pre{
+  transition: transform 2s;
     overflow: hidden;
     margin-left: 7vw;
     background: none;
@@ -29,14 +32,11 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 10px 10px
 }
 
 .template-B-preview-container{
-    width: 50vw;
-
-    overflow: scroll;
+width: 42vw;
+    overflow-y: scroll;
     background-color: white;
-    height: 80vh;
-    margin-left: 5vw;
-    margin-top: 10vh;
-    border: 4px solid blueviolet;
+    height: 82vh;
+    overflow-x: hidden;
 }
 .template-A{
   color: rgb(14, 0, 0);
@@ -129,14 +129,11 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 10px 10px
 
 /* //////////////////////////////////  */
 .template-C-preview-container{
-       width: 50vw;
-
-    overflow: scroll;
+width: 42vw;
+    overflow-y: scroll;
     background-color: white;
-    height: 80vh;
-    margin-left: 5vw;
-    margin-top: 10vh;
-    border: 4px solid blueviolet;
+    height: 82vh;
+    overflow-x: hidden;
 }
 
 .template-C-preview-container p{
@@ -179,14 +176,11 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 10px 10px
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 .template-D-preview-container{
-  width: 50vw;
-
-    overflow: scroll;
+width: 42vw;
+    overflow-y: scroll;
     background-color: white;
-    height: 80vh;
-    margin-left: 5vw;
-    margin-top: 10vh;
-    border: 4px solid blueviolet;
+    height: 82vh;
+    overflow-x: hidden;
 }
 
 .template-D-main{
@@ -522,7 +516,7 @@ background-color: white;
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
-
+    
     .main .ach h6{
         font-size: 1rem;
         margin: 1rem;

@@ -1,7 +1,189 @@
-img{
-    width: 4rem;
+
+.nav-m #img:hover{
+  transform: scale(1.5);
+}
+ .nav-m #img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 3rem;
+    transition: transform 2.5s;
+
+}
+.nav-m .profileimg{
+      position: absolute;
+    left: 2rem;
 }
 
-.nav-m{
-  background-color: black;
+.nav-m #light{
+  position: absolute;
+  left: 6rem;
 }
+.nav-m .impx{
+  position: relative;
+    top: 10px;
+}
+ .nav-m{
+   background: none;
+   height: 6rem;
+           border: 1px solid rgb(245, 238, 237);
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+
+.nav-m .a-link{
+  font-family: 'Permanent Marker', cursive;
+    margin-left: 40vw;
+    font-size: 2rem;
+    color: black;
+    margin-top: 0rem;
+    letter-spacing: 1rem;
+    font-weight: bolder;
+    text-shadow: 4px 1px 2px rgb(255, 0, 221);
+     -webkit-animation:colorchange 10s infinite alternate;
+         position: relative;
+    top: -60px;
+    left: -33px;
+}
+
+/* .a-link::before{
+   animation: animate infinite 4s;
+} */
+
+@keyframes colorchange{
+   
+  10%{
+        text-shadow: 4px 1px 2px rgb(9, 255, 0)
+  }
+  20%{
+    text-shadow: 4px 1px 2px rgb(255, 0, 34);
+  }
+    30%{
+    text-shadow: 4px 1px 2px rgb(238, 255, 0);
+  }
+    40%{
+    text-shadow: 4px 1px 2px rgb(255, 51, 0);
+  }
+    50%{
+    text-shadow: 4px 1px 2px rgb(0, 68, 255);
+  }
+    60%{
+    text-shadow: 4px 1px 2px rgb(255, 0, 234);
+  }
+    70%{
+    text-shadow: 4px 1px 2px rgb(0, 255, 0);
+  }
+    80%{
+    text-shadow: 4px 1px 2px rgb(1, 23, 150);
+  }
+    90%{
+    text-shadow: 4px 1px 2px rgb(51, 94, 2);
+  }
+   
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* //////////////       dark mode            ///////// */
+
+.nav-n #img:hover{
+  transform: scale(1.5);
+}
+ .nav-n #img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 3rem;
+    transition: transform 2.5s;
+
+}
+.nav-n .profileimg{
+      position: absolute;
+    left: 2rem;
+}
+
+.nav-n #light{
+  position: absolute;
+  left: 6rem;
+}
+.nav-n .impx{
+  position: relative;
+    top: 10px;
+}
+ .nav-n{
+   background: none;
+   height: 6rem;
+           border: 1px solid rgb(245, 238, 237);
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+
+.nav-n .a-link{
+  font-family: 'Permanent Marker', cursive;
+    margin-left: 40vw;
+    font-size: 2rem;
+    color: rgb(253, 250, 250);
+    margin-top: 0rem;
+    letter-spacing: 1rem;
+    font-weight: bolder;
+    text-shadow: 4px 1px 2px rgb(255, 0, 221);
+     -webkit-animation:colorchange 10s infinite alternate;
+         position: relative;
+    top: -60px;
+    left: -33px;
+}
+
+/* .a-link::before{
+   animation: animate infinite 4s;
+} */
+
+@keyframes colorchange{
+   
+  10%{
+        text-shadow: 4px 1px 2px rgb(9, 255, 0)
+  }
+  20%{
+    text-shadow: 4px 1px 2px rgb(255, 0, 34);
+  }
+    30%{
+    text-shadow: 4px 1px 2px rgb(238, 255, 0);
+  }
+    40%{
+    text-shadow: 4px 1px 2px rgb(255, 51, 0);
+  }
+    50%{
+    text-shadow: 4px 1px 2px rgb(0, 68, 255);
+  }
+    60%{
+    text-shadow: 4px 1px 2px rgb(255, 0, 234);
+  }
+    70%{
+    text-shadow: 4px 1px 2px rgb(0, 255, 0);
+  }
+    80%{
+    text-shadow: 4px 1px 2px rgb(1, 23, 150);
+  }
+    90%{
+    text-shadow: 4px 1px 2px rgb(51, 94, 2);
+  }
+   
+
+
+
+
+
+
+}
+

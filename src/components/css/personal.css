@@ -21,7 +21,11 @@
 
 }
 
+.bahr:hover{
+    transform: scale(1.031);
+}
 .bahr{
+      transition: transform 2s;
     width: 40vw;
     border: 1px solid black;
     background: none;

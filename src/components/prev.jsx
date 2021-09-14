@@ -171,7 +171,7 @@ let Prev = () => {
 
             <div class="projects">
                 <h3>PROJECTS</h3>
-                <div class="p">
+                <div class="px">
 
                     {
                         project.map((ele) => {
@@ -188,7 +188,7 @@ let Prev = () => {
             </div>
             <div class="work">
                 <h3>WORK EXPERIENCE</h3>
-                <div class="p">
+                <div class="px">
 
                     {
                         exp.map((ele) => {

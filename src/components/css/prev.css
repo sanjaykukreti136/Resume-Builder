@@ -423,7 +423,7 @@
     text-align: center;
 
     }
-    .maina .p{
+    .maina .px{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -483,6 +483,15 @@
     .maina .ach h3{
         
         font-size: 3rem;
+    font-family: 'Kaisei Tokumin';
+    font-weight: bolder;
+    text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .maina h3{
+              font-size: 3rem;
     font-family: 'Kaisei Tokumin';
     font-weight: bolder;
     text-align: center;

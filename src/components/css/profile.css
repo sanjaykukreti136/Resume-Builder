@@ -13,13 +13,16 @@
    justify-content: space-evenly
 }
 
+.resume-box:hover{
+    transform: scale(1.051);
+}
 .resume-box{
     width: 18rem;
     height: 21rem;
     object-fit: contain;
     border: 1px solid rgb(245, 238, 237);
 box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
+    transition: transform 1s;
 }
 
 .resume-box img{

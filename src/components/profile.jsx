@@ -28,7 +28,8 @@ let Profile = () => {
                         {ele.temp == "A" ? <img src="http://localhost:3000/A.png" ></img> :
                             ele.temp == "B" ? <img src="http://localhost:3000/B.png"></img> :
                                 ele.temp == "C" ? <img src="http://localhost:3000/C.png"></img> :
-                                    <img src="http://localhost:3000/A.png"></img>
+                                    ele.temp == "D" ? <img src="http://localhost:3000/A.png"></img> :
+                                        <img src="http://localhost:3000/PA.png"></img>
                         }
                     </div>
 
