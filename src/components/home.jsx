@@ -152,10 +152,10 @@ let Home = () => {
 
                 <div className="port-box"  >
                     <button className="pp" onClick={() => {
-                        setcount(count - 1);
+                        setcount(count - 1 < 0 ? count - 1 + 3 : count - 1);
                     }} >🡸</button>
                     <button className="n" onClick={() => {
-                        setcount(count + 1);
+                        setcount(count + 1 >= 3 ? count - 3 : count + 1);
                     }} >🡺</button>
                     {count <= 0 ? <img onClick={() => {
                         dispatch(templateSelect("AA"));
@@ -181,7 +181,9 @@ let Home = () => {
 
         {user ? "" : <Redirect to="/login" />}
         <button className="btn-primary log-out" onClick={() => {
-            autha.signOut();
+            autha.signOut().then(() => {
+                history.push("/login")
+            })
 
         }} >LOGOUT</button>
     </div >

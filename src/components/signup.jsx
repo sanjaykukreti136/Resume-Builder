@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { autha } from "../firebase"
 import { Redirect } from "react-router-dom";
-
+import "./css/signup.css"
 let Signup = () => {
     let history = useHistory();
     let [email, setEmail] = useState("")
@@ -14,8 +14,8 @@ let Signup = () => {
         <>
 
             {user ? <Redirect to="/" /> : ""}
-            <div className="row" >
-                <div className="col-4  offset-3 mt-4" >
+            <div className="row rowc" >
+                <div className="col-4  offset-3 log" >
                     <form>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -36,25 +36,31 @@ let Signup = () => {
                                 setConfirmPassword(e.currentTarget.value);
                             }} type="password" class="form-control" id="exampleInputPassword2" />
                         </div>
-                        <button onClick={(e) => {
-                            e.preventDefault();
-                            if (password === confirmpassword) {
+                        <span>
+                            <button onClick={(e) => {
+                                e.preventDefault();
+                                if (password === confirmpassword) {
 
-                                autha.createUserWithEmailAndPassword(email, password);
+                                    autha.createUserWithEmailAndPassword(email, password);
 
-                            }
-                            else {
-                                alert("PASSWORD DOESNOT MATCH")
-                            }
+                                }
+                                else {
+                                    alert("PASSWORD DOESNOT MATCH")
+                                }
 
 
-                        }} type="button" class="btn btn-warning login">Signup</button>
-                        <br />
-                        <br />
-                        <button onClick={() => {
-                            history.push("/login")
-                        }} type="button" class="btn btn-warning signup">Login</button>
+                            }} type="button" class="btn btn-warning login">Signup</button>
+                            <br />
+                            <br />
+                            <button onClick={() => {
+                                history.push("/login")
+                            }} type="button" class="btn btn-warning signup">Login</button>
+                        </span>
                     </form>
+                </div>
+                <div className="logo">
+                    <img src="https://cdn.dribbble.com/users/36126/screenshots/2228873/rb-logo.png"></img>
+
                 </div>
 
             </div>

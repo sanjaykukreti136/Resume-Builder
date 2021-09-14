@@ -14,10 +14,10 @@ let PersonalData = () => {
     let { id } = useSelector(state => state.saveState);
     let { uid } = useSelector(state => state.user);
     let code = useSelector(state => state.template);
-
+    let theme = useSelector(state => state.theme);
     return <>
         <div className="personal-container"  >
-            <div className="bahr" >
+            <div className={`bahr ${theme == "dark" ? "dark" : ""}`} >
                 <div className="input-data" >
 
                     <div class="row m-4">

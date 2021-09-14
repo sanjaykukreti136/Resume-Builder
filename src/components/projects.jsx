@@ -13,9 +13,11 @@ let Project = () => {
     let projectss = details.project
     let pob = { name: "", des: "", tech: "", github: "" }
     console.log(details);
+    let theme = useSelector(state => state.theme);
+
     return <>
         <div className="pro-container" >
-            <div className="bahr" >
+            <div className={`bahr ${theme == "dark" ? "dark" : ""}`} >
                 <div className="pro-data" >
 
                     <div class="row m-4">

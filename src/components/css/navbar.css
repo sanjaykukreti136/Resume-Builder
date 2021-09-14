@@ -1,5 +1,5 @@
 
-.nav-m #img:hover{
+.nav-m  #img:hover{
   transform: scale(1.5);
 }
  .nav-m #img{
@@ -9,6 +9,9 @@
     transition: transform 2.5s;
 
 }
+
+
+
 .nav-m .profileimg{
       position: absolute;
     left: 2rem;
@@ -16,7 +19,31 @@
 
 .nav-m #light{
   position: absolute;
-  left: 6rem;
+  left: 90rem;
+  border-radius: 50%;
+  background-color: black;
+}
+.nav-n #light{
+    position: absolute;
+  left: 90rem;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.nav-m #ios{
+  border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border: none;
+}
+
+.nav-n #ios{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border: none;
 }
 .nav-m .impx{
   position: relative;
@@ -98,6 +125,9 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 /* //////////////       dark mode            ///////// */
 
+.nav-n{
+  background-color: black
+}
 .nav-n #img:hover{
   transform: scale(1.5);
 }
@@ -113,19 +143,15 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     left: 2rem;
 }
 
-.nav-n #light{
-  position: absolute;
-  left: 6rem;
-}
 .nav-n .impx{
   position: relative;
     top: 10px;
 }
  .nav-n{
-   background: none;
+
    height: 6rem;
-           border: 1px solid rgb(245, 238, 237);
-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+           border: 1px solid rgb(15, 15, 15);
+box-shadow: rgba(241, 239, 239, 0.904) 0px 10px 20px, rgba(247, 246, 246, 0.932) 0px 6px 6px;
 }
 
 
@@ -187,3 +213,6 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
 
+.container-fluid{
+  height: 4rem;
+}

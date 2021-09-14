@@ -9,9 +9,10 @@ let Qualification = () => {
     let dispatch = useDispatch();
     let history = useHistory();
     let details = useSelector(state => state.detail);
+    let theme = useSelector(state => state.theme);
     return <>
         <div className="edu-container" >
-            <div className="bahr">
+            <div className={`bahr ${theme == "dark" ? "dark" : ""}`}>
                 <div className="edu-data" >
 
                     <div class="row m-4"  >

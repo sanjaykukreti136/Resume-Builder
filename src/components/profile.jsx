@@ -7,16 +7,21 @@ import { Save } from "./redux/actions/saveAction";
 
 import { firestorea } from "../firebase";
 
+import { Redirect } from "react-router-dom";
 let Profile = () => {
     let detail = useSelector(state => state.detail);
     console.log("aa gya")
     console.log(detail.myobj);
     let history = useHistory();
+    let user = useSelector(state => state => state.user);
     let dispatch = useDispatch();
+    let theme = useSelector(state => state.theme);
     return <>
+
+        {user == null ? <Redirect to="/login" /> : ""}
         <div className="main-profile">
 
-            <h3>YOUR RESUME'S</h3>
+            <h3 id={`${theme == "dark" ? "change" : ""}`}  >YOUR RESUME'S</h3>
             <div className="resumes">
                 {detail.myobj.map((ele) => {
 

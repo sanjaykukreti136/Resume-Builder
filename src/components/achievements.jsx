@@ -18,10 +18,11 @@ let Ach = () => {
     let { id } = useSelector(state => state.saveState);
     let { uid } = useSelector(state => state.user);
     let code = useSelector(state => state.template);
+    let theme = useSelector(state => state.theme);
     console.log(code + "   -  =  code ==");
     return <>
         <div className="ach-container" >
-            <div className="bahr" >
+            <div className={`bahr ${theme == "dark" ? "dark" : ""}`}>
                 <div className="ach-data" >
 
                     <div class="row m-4">

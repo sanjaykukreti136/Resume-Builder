@@ -15,9 +15,10 @@ let Skills = () => {
     let projectss = details.exp
     let pob = { company: "", role: "", des: "" }
     let a = "";
+    let theme = useSelector(state => state.theme);
     return <>
         <div className="skills-container" >
-            <div className="bahr">
+            <div className={`bahr ${theme == "dark" ? "dark" : ""}`}>
                 <div className="skills-data" >
 
                     <div class="row m-4">

@@ -1,0 +1,48 @@
+.rowc{
+    display: flex;
+    background-color: white;
+
+}
+
+.log{
+    width: 30vw;
+    height: 55vh;
+    background-image: linear-gradient( 109.6deg,  rgba(247,253,166,1) 11.2%, rgba(128,255,221,1) 57.8%, rgba(255,128,249,1) 85.9% );
+
+    margin-left: 15vw;
+    margin-top: 9vh;
+    border: 1px solid rgb(245, 238, 237);
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 4%;
+        transition: transform 2s;
+}
+
+.log:hover{
+    transform: scale(1.0511);
+}
+
+.log input{
+    margin-top: 2vh;
+}
+.log label{
+    margin-top: 4vh;
+    font-size: 1.5rem;
+}
+.log span{
+    display: flex;
+}
+
+.log span button{
+    margin-left: 4vw;
+    margin-top: 2rem;
+}
+
+.logo{
+    width: 50vw;
+    height: 100vh;
+}
+
+.logo img{
+    width: 100%;
+    height: 70%;
+}
