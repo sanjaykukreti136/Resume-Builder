@@ -18,8 +18,8 @@ let Navbar = () => {
         <nav class={`navbar navbar-dark ${theme == "light" ? "nav-m" : "nav-n"}`}>
             <div class="container-fluid">
                 <Link to="/" className="navbar-brand" > <div class="a-link">SMART CV
-                    <img id="#imgp" src="http://localhost:3000/lo.png" ></img></div>
-
+                    {/* <img id="#imgp" src="https://w7.pngwing.com/pngs/285/419/png-transparent-computer-icons-contract-document-symbol-miscellaneous-text-sign.png" ></img></div> */}
+                </div>
                 </Link>
 
             </div>
